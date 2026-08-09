@@ -152,7 +152,6 @@ footer {
 
 .footer-container__social-links {
     margin-top: 10px;
-    width: 180px;
     display: flex;
     gap: 15px;
 }
@@ -179,6 +178,10 @@ footer {
     color: #2b4543;
     letter-spacing: 2px;
     font-size: 20px;
+}
+
+.footer-container__adress p {
+    margin-bottom: 12px;
 }
 
 .main-container {
@@ -242,7 +245,6 @@ footer {
 
 .main-container__text-block button {
     margin-top: 30px;
-    height: 50px;
     width: 175px;
     border-radius: 12px;
     border: solid 1px #2b4543;
@@ -394,11 +396,11 @@ footer {
 @media (max-width: 768px) {
     .main-container-layout {
         flex-direction: column;
-        align-items: center;
+        padding: 15px;
     }
 
     .main-container__text-block, .main-container__photo-block {
-        width: 90%;
+        width: 100%;
     }
 
     .main-container-slides {
@@ -605,16 +607,20 @@ footer {
 
  .about-container {
     height: 100%;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
  }
 
  .about-container-layout {
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
  }
 
  .about-container-image {
@@ -623,12 +629,18 @@ footer {
     width: 50%;
     align-items: center;
     justify-content: center;
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
 
  .about-container-image img {
-    height: 100%;
-    width: 80%;
     padding-left: 100px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
  }
 
  .about-container-text {
@@ -637,6 +649,12 @@ footer {
     height: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
  }
 
  .about-container-text__slide {
@@ -650,39 +668,35 @@ footer {
 
  .about-container-text p {
     font-family: "Montserrat", sans-serif;
-    margin-top: 30px;
-    font-size: 20px;
-    letter-spacing: 1px;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 20px;
     
  }
 
  .about-container-text h2 {
     font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 50px;
+    font-size: 2.5rem;
     color: #2b4543;
-    letter-spacing: 1px;
-    margin-left: 3vh;
+    margin-bottom: 10px;
+    
  }
 
  .about-container-text button {
-    width: 95%;
-    height: 10vh;
-    border-radius: 10px;
-    border: solid #2b4543 1px;
-    background-color: #ffffff;
-    color: #2b4543;
-    font-size: 15px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-top: 30px;
+    padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #0f91a7;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
  }
 
  .about-container-text button:hover {
-    
-    opacity: 0.8;
- }
+    background-color: #005f73;
+  }
 
  .about-wrapper {
     width: 50%;
@@ -703,7 +717,6 @@ footer {
 .about-down-layout__slide {
     display: flex;
     flex-direction: column;
-    width: 50%;
     background: linear-gradient(90deg, rgba(255, 195, 113, 1) 46%, rgba(255, 165, 0, 1) 100%);
     height: auto; /* чтобы блок мог расширяться по содержимому */
 
@@ -813,6 +826,40 @@ footer {
     margin-top: 20px;
     font-size: 14px;
     border-bottom: 1px solid #0F91A7;
+}
+
+/* Медиа-запросы для адаптивности */
+@media(max-width: 768px){
+  .about-container-layout {
+    flex-direction: column;
+  }
+  .about-container-image {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  .about-container-text {
+    align-items: center;
+  }
+  .about-container-text h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .about-container-text p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .about-container-text__slide {
+    width: 100%;
+  }
+  .about-container-image img {
+    padding-left: 0px;
+  }
+  .about-container {
+    min-height: 100%;
+  }
+  .about-container-text {
+    text-align: center;
+  }
 }
 
 .section-title {
@@ -984,7 +1031,7 @@ footer {
 
 .a11y-mode a {
     color: #000 !important;
-    font-size: 26px !important;
+    font-size: 25px !important;
 }
 
 .a11y-mode p {
@@ -992,7 +1039,7 @@ footer {
 }
 
 .a11y-mode li {
-    font-size: 30px !important;
+    font-size: 28px !important;
 }
 
 .a11y-mode h2 {
@@ -1003,6 +1050,7 @@ footer {
     font-size: 20px !important;
     padding: 12px 20px !important;
 }
+
 
   /* Общие стили для контейнеров */
 .documents-page-docs {
@@ -1313,72 +1361,137 @@ footer {
   }
 
 .therapy-container {
-    display: flex;
-    height: 1000px;
-    background-color: #f2f2f2;
+    position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #f2f2f2; /* светлый фон */
+  overflow: hidden; /* чтобы скрывать выступающие элементы */
 }
 
  .therapy-container-color-block {
     position: absolute;
-    background-color: #7cd1e4;
+    top: 0;
+    right: 0;
     width: 938px;
     height: 400px;
-    right: 0;
-    border-radius: 15px;   
+    background-color: #7cd1e4;
+    border-radius: 15px;
+    z-index: 1;
+    opacity: 0.8; /* немного прозрачности для мягкости */   
  }
 
  .therapy-container-image {
-    position: absolute;
-    margin-top: 165px;
-    /* box-shadow: 5px 5px 35px 0 rgba(0, 0, 0, 0.15); */
+    flex: 1 1 40%;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin-bottom: 20px;
  }
 
  .therapy-container-image img {
-    height: 600px;
-    width: 800px;
-    border-radius: 15px;
+    max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  object-fit: cover;
  }
 
  .therapy-container-text {
-    background-color: #ffffff;
-    position: absolute;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    width: 650px;
-    height: 420px;
-    margin-top: 375px;
-    margin-right: 125px;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Montserrat", sans-serif;
-    border-radius: 15px;
+    flex: 1 1 50%;
+  max-width: 600px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  border-radius: 15px;
+  z-index: 3;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
  }
 
  .therapy-container-text h2{
-    margin-top: 50px;
-    color: #2b4543;
-    letter-spacing: 1px;
-    font-size: 28px;
+    font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  color: #2b4543;
+  margin-bottom: 20px;
  }
 
  .therapy-container-text p {
-    padding: 0 20px;
-    letter-spacing: 1px;
-    color: #2b4543;
+    font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 30px;
+  word-wrap: break-word;
  }
 
- .therapy-container-text button {
-    background-color: #0F91A7;
-    height: 50px;
-    width: 140px;
+ #scrollButton {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 10px;
     border: none;
-    border-radius: 30px;
-    margin-bottom: 50px;
-    color: #ffffff;
-    letter-spacing: 1px;
-    /* font-family: "Montserrat", sans-serif; */
- }
+    background-color: #0f91a7;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  #scrollButton:hover {
+    background-color: #005f73;
+    transform: translateY(-2px);
+  }
+
+  /* Медиазапрос для адаптивности */
+@media(max-width: 768px){
+    .therapy-container {
+      flex-direction: column;
+      padding: 30px 20px;
+    }
+  
+    .therapy-container-color-block {
+      width: 100%;
+      height: auto;
+      position: static;
+      opacity: 1;
+      margin-bottom: 20px;
+    }
+  
+    .therapy-container-image {
+      flex: 1 1 80%;
+    }
+  
+    .therapy-container-text {
+      flex: 1 1 80%;
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      align-items: normal;
+    }
+  
+    .therapy-container-text h2 {
+      font-size: 2rem;
+    }
+  
+    .therapy-container-text p {
+      font-size: 1rem;
+    }
+  
+    #scrollButton {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.2rem;
+    }
+  }
+
 
  .therapy-container-text a {
     display: block;
@@ -1616,58 +1729,16 @@ footer {
     .more-cost-section {
         margin-left: 18px;
     }
-
-    .therapy-container-text {
-        height: 400px;
-    }
-
-    .therapy-container-text {
-        margin-right: 0;
-        width: 600px;
-    }
 }
 
 @media screen and (max-width: 760px) {
-
-    .about-wrapper {
-        width: 90%;
-    }
-
-    .about-container-image img {
-        width: 100%;
-        padding-left: 0px;
-    }
-
-    .about-container {
-        margin-top: 40px;
-    }
     
-    .about-container-text__slide {
+    .about-wrapper {
+        width: 80%;
+    }
+
+    .about-down-layout__slides {
         width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .about-container-layout {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .about-container-text {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .about-container-text p {
-        margin-top: 10px;
-        display: inline-block;
-        width: 200px;
-        text-align: justify;
-    }
-
-    .about-container-text button {
-        width: 170px;
-        height: 100%;
     }
 
     .about-info-slides__slide-image img {
@@ -1680,6 +1751,11 @@ footer {
 
     .about-info-slides__slide {
         flex-direction: column;
+        width: 55%;
+    }
+    
+    .about-info-slides {
+        padding: 0px;
     }
 }
 
@@ -1687,12 +1763,6 @@ footer {
 
     .main-padding {
         padding-top: 170px;
-    }
-
-    .about-container-text button {
-        width: 170px;
-        display: block;
-        margin-left: 15px;
     }
 
     .about-info-slides__slide-image img{
@@ -1715,51 +1785,15 @@ footer {
 
 }
 
-@media screen and (max-width: 615px) {
-    .therapy-container {
-        height: 850px;
-        justify-content: center;
-    }
-    
-     .therapy-container-color-block {
-        
-     }
-    
-     .therapy-container-image {
-        
-     }
-    
-     .therapy-container-image img {
-        width: 100%;
-        box-sizing: border-box;
-     }
-    
-     .therapy-container-text {
-        position: relative;
-        width: 400px;
-     }
-    
-     .therapy-container-text h2{
-        font-size: 23px;
-        margin-top: 30px;
-     }
-    
-     .therapy-container-text p {
-        text-align: justify;
-        font-size: 15px;
-
-     }
-    
-     .therapy-container-text button {
-        margin-bottom: 20px;
-     }
-}
-
 @media screen and (max-width: 500px) {
 
     .footer-container__adress {
         letter-spacing: 0px;
         font-size: 18px;
+    }
+    .footer-container__image img{
+        height: 125px;
+        width: 325px;
     }
     .main-padding {
         padding-top: 150px;
@@ -1767,6 +1801,7 @@ footer {
 
     .footer-container__links a {
         padding: 10px 10px;
+        letter-spacing: 0px;
     }
 
     .more-container-img img {
@@ -1789,21 +1824,40 @@ footer {
     .price-container:first-child {
         margin-top: 30px;
     }
+
+    .reasons {
+        max-width: 80%;
+    }
+
+    .reasons li {
+        font-size: 20px;
+    }
+
+    reasons li::before {
+        margin-right: 0px;
+    }
+
+    .building-image {
+        max-width: 80%;
+        margin-left: 10%;
+    }
+
+    .version-button {
+        margin-right: 30px;
+    }
+
+    .main-padding {
+        padding-top: 250px; 
+     }
 }
 
 @media screen and (max-width: 430px) {
-
-.therapy-container {
-    height: 1000px;
-}
-
-.therapy-container-text {
-    height: 500px;
-    width: 370px;
+ .dop-info-wrapper {
+   padding: 0px;  
  }
 
- .therapy-container-text button {
-    margin-bottom: 50px;
+ .about-info-slides__slide {
+    width: 60%;
  }
 }
 
@@ -1820,17 +1874,8 @@ footer {
         font-size: 16px;
     }
 
-    .about-container {
-        height: 1150px;
-    }
-
-    .therapy-container-text {
-        height: 500px;
-        width: 350px;
-     }
-
-     .therapy-container-text h2 {
-        font-size: 22px;
+     .about-container-text {
+        width: 80%;
      }
 } 
 
@@ -1841,18 +1886,6 @@ footer {
 
     .about-container {
         height: 1300px;
-    }
-
-    .therapy-container {
-        height: 700px;
-    }
-
-    .therapy-container-image img {
-        display: none;
-    }
-
-    .therapy-container-text {
-        margin-top: 150px;
     }
 }
 
