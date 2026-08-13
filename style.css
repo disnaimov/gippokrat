@@ -1274,6 +1274,15 @@ footer {
     padding: 20px;
     box-sizing: border-box;
   }
+
+  .service-container h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: "Oswald", sans-serif;
+    color: #2c4b47;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+  }
   
   /* Слайдер с карточками */
   .service-container-slides {
